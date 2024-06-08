@@ -34,6 +34,6 @@ jobs:
             - name: Run the script
               run: python crto.py
               env:
-                EMAIL: ${{ secrets.EMAIL }}
-                PASSWORD: ${{ secrets.PASSWORD }}
-                WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+                EMAIL: ${{ config.EMAIL }}
+                PASSWORD: ${{ config.PASSWORD }}
+                WEBHOOK_URL: ${{ config.WEBHOOK_URL }}
