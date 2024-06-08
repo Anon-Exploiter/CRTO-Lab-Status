@@ -2,9 +2,8 @@
 
  Posts the latest status of CRTO labs, `running`/`stopped` and remaining `hours` in Discord/Slack. 
 
- ![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/8ecbd654-409a-433c-9432-ab82591e2181)
-
- ![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/6f22e1f2-0a4b-4df1-8533-074b154a8fa8)
+ <img src="https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/8ecbd654-409a-433c-9432-ab82591e2181" width="370" height="150">
+ <img src="https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/6f22e1f2-0a4b-4df1-8533-074b154a8fa8" width="370" height="150">
 
 
 ### Why?
