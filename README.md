@@ -1,6 +1,6 @@
 # CRTO Lab Status
 
- Posts the latest status of CRTO labs, `running`/`stopped` and remaining `hours` in Discord. 
+ Posts the latest status of CRTO labs, `running`/`stopped` and remaining `hours` in Discord/Slack. 
 
  ![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/b7abd1f9-4daf-4547-be98-a07bbc5fbc62)
 
@@ -17,13 +17,13 @@ The script should help by notifying the person every 10 minutes about their lab 
 Currently, it only contains the following: 
 - Fetching the status of labs: `running`/`stopped`
 - Fetching the total number of `hours` remaining 
-- Posting all that stuff in a `Discord channel` through Webhooks
+- Posting all that stuff in a `Discord/Slack` channel through Webhooks
 
 ### How it works?
 
 Trying to login on **snaplabs** through simple requests module was a pain as its using cognito which implements authentication in a shitty way. Easy way to automate was to use selenium and so I did just that. 
 
-The script utilizes `Selenium` with `Chrome (headless)` to first login into the application, opens the course, reads the `status` about the lab if its running or stopped, reads the total `hours remaining` in the lab and posts it all in the specified Discord Channel through Webhooks. 
+The script utilizes `Selenium` with `Chrome (headless)` to first login into the application, opens the course, reads the `status` about the lab if its running or stopped, reads the total `hours remaining` in the lab and posts it all in the specified Discord/Slack Channel through Webhooks. 
 
 ### How to use?
 
