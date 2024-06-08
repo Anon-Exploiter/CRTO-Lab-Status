@@ -1,7 +1,6 @@
 name: CRTO Lab Status
 
 on:
-    workflow_dispatch: 
     push:
         branches: [main]
     schedule:
