@@ -2,6 +2,16 @@
 
  Posts the latest status of CRTO labs, `running`/`stopped` and remaining `hours` in Discord. 
 
+ ![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/b7abd1f9-4daf-4547-be98-a07bbc5fbc62)
+
+
+### Why?
+
+Due to the lab's limited hours, leaving it running by mistake may exhaust all available time.
+https://training.zeropointsecurity.co.uk/courses/red-team-ops#:~:text=Managing%20your%20runtime 
+
+The script should help by notifying the person every 10 minutes about their lab status. 
+
 ### Features
 
 Currently, it only contains the following: 
@@ -32,10 +42,4 @@ Here's how to configure the environmental variables:
 
 ![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/6bc965ec-4010-4bd5-97f6-7bc0dcad07aa)
 
-
-### Output
-
-![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/6da22ceb-0d22-4bb8-8ec2-73e1a0ea1788)
-
-![image](https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/b7abd1f9-4daf-4547-be98-a07bbc5fbc62)
 
