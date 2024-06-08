@@ -2,6 +2,14 @@
 
  Posts the latest status of CRTO labs, `running`/`stopped` and remaining `hours` in Discord. 
 
+
+### Why?
+
+Due to the lab's limited hours, leaving it running by mistake may exhaust all available time.
+https://training.zeropointsecurity.co.uk/courses/red-team-ops#:~:text=Managing%20your%20runtime 
+
+The script should help by notifying the person every 10 minutes about their lab status. 
+
 ### Features
 
 Currently, it only contains the following: 
