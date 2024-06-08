@@ -6,8 +6,9 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from discord import SyncWebhook
 from os import getenv
+
+import requests
 
 
 def fetch_environ_vars():
@@ -28,11 +29,18 @@ def fetch_environ_vars():
         )
 
 
-def post_on_discord(webhook, text):
+def post_to_discord(webhook, text):
     print("[*] Posting status on Discord")
-    webhook = SyncWebhook.from_url(webhook)
-    webhook.send(text)
-    print("[+] Posted on Discord")
+    msg_status = requests.post(webhook, json={"content": text})
+    if msg_status.status_code == 200:
+        print("[+] Posted on Discord")
+
+
+def post_to_slack(webhook, text):
+    print("[*] Posting status on Slack")
+    msg_status = requests.post(webhook, json={"text": text})
+    if msg_status.status_code == 200:
+        print("[+] Posted on Slack")
 
 
 def initiate_driver():
@@ -143,11 +151,11 @@ def get_course_stats(driver):
     ).text
     print(f"[+] Lab Status: {lab_status}\n")
 
-    discord_text = f"[#] CRTO Lab Stats\n\n"
-    discord_text += f"Lab Status: **{lab_status}**\n"
-    discord_text += hours_remaining
+    text = f"[#] CRTO Lab Stats\n\n"
+    text += f"Lab Status: **{lab_status}**\n"
+    text += hours_remaining
 
-    return discord_text
+    return text
 
 
 def main():
@@ -157,8 +165,12 @@ def main():
     login(driver, email, password)
     access_course(driver)
 
-    discord_text = get_course_stats(driver)
-    post_on_discord(webhook_url, discord_text)
+    text = get_course_stats(driver)
+    if "slack" in webhook_url:
+        post_to_slack(webhook_url, text)
+
+    else:
+        post_to_discord(webhook_url, text)
 
 
 if __name__ == "__main__":
