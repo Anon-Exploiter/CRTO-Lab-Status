@@ -37,7 +37,7 @@ python crto.py
 
 ### How to run this automatically? 
 
-If you haven't noticed, there's Github Actions configured for the project, just fork this repo, create the environmental variables within project settings and the cron should run every 10 minutes posting the output within Discord.
+If you haven't noticed, there's Github Actions configured for the project, just fork this repo, create the environmental variables within project settings and the cron should run every 10 minutes posting the output within Discord/Slack.
 
 Here's how to configure the environmental variables: 
 
