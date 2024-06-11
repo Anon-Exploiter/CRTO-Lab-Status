@@ -159,7 +159,7 @@ def get_course_stats(driver):
         return text
 
     else:
-        exit("Labs aren't running, don't do anything..")
+        exit("Labs aren't running, not posting anything..")
 
 
 def main():
