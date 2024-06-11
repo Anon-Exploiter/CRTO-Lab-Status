@@ -151,11 +151,15 @@ def get_course_stats(driver):
     ).text
     print(f"[+] Lab Status: {lab_status}\n")
 
-    text = f"[#] CRTO Lab Stats\n\n"
-    text += f"Lab Status: **{lab_status}**\n"
-    text += hours_remaining
+    if "Running" in lab_status:
+        text = f"[#] CRTO Lab Stats\n\n"
+        text += f"Lab Status: **{lab_status}**\n"
+        text += hours_remaining
 
-    return text
+        return text
+
+    else:
+        exit("Labs aren't running, don't do anything..")
 
 
 def main():
