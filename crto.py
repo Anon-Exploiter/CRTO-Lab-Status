@@ -159,7 +159,7 @@ def get_course_stats(driver):
         return text
 
     else:
-        exit("Labs aren't running, not posting anything..")
+        return None
 
 
 def main():
@@ -170,11 +170,13 @@ def main():
     access_course(driver)
 
     text = get_course_stats(driver)
-    if "slack" in webhook_url:
-        post_to_slack(webhook_url, text)
 
-    else:
-        post_to_discord(webhook_url, text)
+    if text:
+        if "slack" in webhook_url:
+            post_to_slack(webhook_url, text)
+
+        else:
+            post_to_discord(webhook_url, text)
 
 
 if __name__ == "__main__":
