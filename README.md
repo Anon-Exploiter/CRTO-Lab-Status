@@ -5,6 +5,7 @@
  <img src="https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/8ecbd654-409a-433c-9432-ab82591e2181" width="370" height="150">
  <img src="https://github.com/Anon-Exploiter/CRTO-Lab-Status/assets/18597330/6f22e1f2-0a4b-4df1-8533-074b154a8fa8" width="370" height="150">
 
+**Note:** If your lab is left running (by mistake), it won't turn off as the bot will keep logging in and accessing the SnapLabs Dashboard. 
 
 ### Why?
 
