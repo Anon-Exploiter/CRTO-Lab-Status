@@ -1,10 +1,11 @@
 name: CRTO Lab Status
 
 on:
-    push:
-        branches: [main]
-    schedule:
-        - cron: '*/50 * * * *'
+    workflow_dispatch
+    # push:
+    #     branches: [main]
+    # schedule:
+    #     - cron: '*/50 * * * *'
 
 
 jobs:
